@@ -17,6 +17,7 @@ from flask_mail import Message
 
 @app.route('/send_email')
 def send_email():
+    return 'Service temporarily down!!!'
     html_body = """
     <p>This is a <b>styled</b> email with <span style="color: green; font-size: 30px;">custom styling</span>.</p>
     """
@@ -25,10 +26,7 @@ def send_email():
     # Attach both plain text and HTML versions of the email
     # msg.body = 'This is the plain text version of the email.'
     msg.html = html_body
-
     mail.send(msg)
-    print("1")
-    return 'Email sent Sucessfully!'
 
 @app.route('/')
 def hello():
