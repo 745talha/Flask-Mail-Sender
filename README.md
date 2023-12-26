@@ -43,7 +43,7 @@ Follow these steps to integrate Flask-Mail Sender into your Flask project.
 
 ### Usage
 
-1. Configure settings and call the "/send_email":
+1. Configure settings and call the "/send_email"
 
 
 2. User can pass the data also but it need some changes in api calling
