@@ -1,28 +1,75 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Flask-Mail Sender
 
-# Flask + Vercel
+## Overview
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+Flask-Mail Sender is a simple Python program that leverages Flask-Mail to send emails. This program is designed to be easy to use and integrate into your Flask applications for sending emails seamlessly.
 
-## Demo
+## Features
 
-https://flask-python-template.vercel.app/
+- **Email Sending:** Easily send emails using Flask-Mail.
+- **Styling:** Styling Mail, using html tags and css styles.
+- **Minimal Setup:** Quickly integrate into your Flask projects.
 
-## How it Works
+## Getting Started
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+Follow these steps to integrate Flask-Mail Sender into your Flask project.
 
-## Running Locally
+### Prerequisites
 
-```bash
-npm i -g vercel
-vercel dev
-```
+- Python installed (version 3.6 or later)
+- Flask installed (`pip install Flask`)
+- Flask-Mail installed (`pip install Flask-Mail`)
 
-Your Flask application is now available at `http://localhost:3000`.
+### Installation
 
-## One-Click Deploy
+1. Clone the repository:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+    ```bash
+    git clone https://github.com/your-username/flask-mail-sender.git
+    ```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+2. Change into the project directory:
+
+    ```bash
+    cd flask-mail-sender
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+
+### Usage
+
+1. Import the `send_email` function into your Flask application:
+
+    ```python
+    from flask_mail_sender import send_email
+    ```
+
+2. Use the `send_email` function to send emails in your application routes:
+
+    ```python
+    send_email('recipient@example.com', 'Subject', 'Body of the email')
+    ```
+
+### Configuration
+
+1. Open the `app.py` file.
+2. Update the email configuration parameters such as `MAIL_SERVER`, `MAIL_PORT`, `MAIL_USE_TLS`, `MAIL_USE_SSL`, `MAIL_USERNAME`, and `MAIL_PASSWORD` to match your email provider's settings.
+3. For Gmail users, since two-factor authentication is enabled, you need to generate an "App Password." Follow these steps:
+    - Go to [https://myaccount.google.com/](https://myaccount.google.com/).
+    - Turn on Two-Factor Authentication.
+    - In the "Security" section, find "App Passwords" and generate a new app password for your application.
+    - Use the generated app password as the value for `MAIL_PASSWORD` in your `app.py` file.
+  
+   
+## Example
+
+Check out the `app.py` file for a simple example of how to use Flask-Mail Sender in a Flask application.
+
+## Acknowledgments
+
+- Flask-Mail: [https://pythonhosted.org/Flask-Mail/](https://pythonhosted.org/flask-mail/)
