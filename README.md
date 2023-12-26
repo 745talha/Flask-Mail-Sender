@@ -25,7 +25,7 @@ Follow these steps to integrate Flask-Mail Sender into your Flask project.
 1. Clone the repository:
 
     ```bash
-    [git clone https://github.com/your-username/flask-mail-sender.git](https://github.com/745talha/Flask-Mail-Sender.git)
+    [git clone https://github.com/745talha/Flask-Mail-Sender.git](git clone https://github.com/745talha/Flask-Mail-Sender.git)
     ```
 
 2. Change into the project directory:
