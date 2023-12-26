@@ -43,17 +43,12 @@ Follow these steps to integrate Flask-Mail Sender into your Flask project.
 
 ### Usage
 
-1. Import the `send_email` function into your Flask application:
+1. Configure settings and call the "/send_email":
 
-    ```python
-    from flask_mail_sender import send_email
-    ```
 
-2. Use the `send_email` function to send emails in your application routes:
+2. User can pass the data also but it need some changes in api calling
 
-    ```python
-    send_email('recipient@example.com', 'Subject', 'Body of the email')
-    ```
+
 
 ### Configuration
 
